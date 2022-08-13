@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="just-click-paragraph"></p>
+    <input id="input-form" type="text" name="" id="">
+    <button id="input-button">update</button>
+    <br>
+    <button onClick="justClickFunction()">Just Function</button>
+    <button id="handle-event">Direct add event</button>
+    <script>
+        const justClickFunction = () => {
+            document.getElementById("just-click-paragraph").innerHTML = "Added from just click function"
+        }
+        document.getElementById('handle-event').addEventListener('click', ()=> {
+            document.getElementById("just-click-paragraph").innerHTML = 'further added';
+        })
+        document.getElementById('input-button').addEventListener('click', ()=> {
+            document.getElementById("just-click-paragraph").innerText = document.getElementById("input-form").value;
+        })
+    </script>
+</body>
+</html>
