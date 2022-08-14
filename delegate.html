@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul-id">
+        <li class="li-class">lorem10</li>
+        <li class="li-class">lorem10</li>
+        <li class="li-class">lorem10</li>
+        <li class="li-class">lorem10</li>
+        <li class="li-class">lorem10</li>
+        <li class="li-class">lorem10</li>
+        <li class="li-class">lorem10</li>
+        <li class="li-class">lorem10</li>
+    </ul>
+    <button id="button-id">Add list</button>
+
+    <script>
+        document.getElementById("button-id").addEventListener("click",()=>{
+            const li = document.createElement("li");
+            li.innerText ="New Item";
+            li.classList.add("li-class");
+            const ul = document.getElementById("ul-id");
+            ul.appendChild(li);
+        })
+        document.getElementById("ul-id").addEventListener("click",(e)=>{
+            e.target.parentNode.removeChild(e.target);
+        })
+    </script>
+</body>
+</html>
